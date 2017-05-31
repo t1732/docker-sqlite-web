@@ -1,0 +1,11 @@
+version: '3.0'
+services:
+  sqlite-web:
+    image: sqrt3/sqlite-web
+    command: /db/sample.sqlite3
+    tty: true
+    stdin_open: true
+    ports:
+      - 8080:8080
+    volumes:
+      - ./db:/db
