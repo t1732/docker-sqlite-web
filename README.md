@@ -2,11 +2,18 @@
 
 ## Usage
 
+```bash
+docker pull sqrt3/sqlite-web
+```
 
-```
-$ docker pull sqrt3/sqlite-web
+environment
+
+```bash
+docker run --rm --name sqlite-web -d -t -p 8080:8080 -v ./:/data -e SQLITE_DATABASE=sqlite.db sqlite-web
 ```
 
-```
-$ docker run --name sqlite-web -d -t -p 8080:8080 -v ./db:/db sqlite-web /db/sample.sqlite3
+cmd
+
+```bash
+docker run --rm --name sqlite-web -d -t -p 8080:8080 -v ./:/data sqlite-web /data/sqlite.db
 ```
